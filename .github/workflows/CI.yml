@@ -1,0 +1,26 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Continues Integration
+
+on:
+     push:
+     pull_request:
+
+jobs:
+     build:
+          strategy:
+               fail-fast: false
+               matrix:
+                    node: [10.x,12.x,14.x,16.x]
+                    os: [macos-latest, ubuntu-latest, windows-latest]
+          runs-on: ${{ matrix.os }}
+          steps:
+               - uses: actions/checkout@v3
+               - name: Use Node.js ${{ matrix.node }}
+                 uses: actions/setup-node@v3
+                 with:
+                    node-version: ${{ matrix.node }}
+                    cache: 'npm'
+               - run: npm ci
+               - run: npm run build --if-present
