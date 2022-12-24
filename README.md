@@ -10,9 +10,22 @@ Add the following to your `mods`:
 "screepsmod-server-stats"
 ```
 
+and to turn on all the api endpoints add the following to your `config.yml`:
+
+```json
+serverStats: true
+```
+
+On same depth as mod & steamKey object
+
 ## Usage
 
-The following api calls can be made
+The following api calls can be made (if turned on)
+
+Default on is:
+
+- /api/stats/server - returns a list of all averaged server stats
+- /api/stats/version - returns the current version of the mod
 
 Rooms:
 
