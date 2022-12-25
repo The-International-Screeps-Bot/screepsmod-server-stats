@@ -38,12 +38,12 @@ Rooms:
 Users:
 
 - /api/users - returns a list of all users
-- /api/users/console - returns a list of all users console
-- /api/users/money - returns a list of all users money
-- /api/users/notifications - returns a list of all users notifications
-- /api/users/resources - returns a list of all users resources
+- (disabled) /api/users/console - returns a list of all users console
+- (disabled) /api/users/money - returns a list of all users money
+- /(disabled) api/users/notifications - returns a list of all users notifications
+- (disabled) /api/users/resources - returns a list of all users resources
 - /api/users/power_creeps - returns a list of all users power_creeps
 
 Market:
 
-- /api/market/transactions - returns a list of all market transactions
+- (disabled) /api/market/transactions - returns a list of all market transactions
