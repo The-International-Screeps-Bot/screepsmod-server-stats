@@ -13,10 +13,12 @@ Add the following to your `mods`:
 and to turn on all the api endpoints add the following to your `config.yml`:
 
 ```json
-serverStats: true
+serverStats: 
+  debug: false
+  rawExports: true
 ```
 
-On same depth as mod & steamKey object
+On same depth as mod & steamKey object. Only turn on DEBUG if you know what you are doing (contact me).
 
 ## Usage
 

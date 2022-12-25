@@ -4,3 +4,5 @@ screepsmod-server-stats-test-1.0.1
 test
 roomsObjects.json
 error.log
+intents.txt
+unknownIntents.log
