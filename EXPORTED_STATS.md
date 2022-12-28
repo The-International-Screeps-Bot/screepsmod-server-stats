@@ -1,15 +1,5 @@
 # Structure of exported stats
 
-```json
-{
-    username: {
-        user: object,
-        owned: object,
-        reserved: object,
-    }
-}
-```
-
 ## Users
 
 - Badge
@@ -28,23 +18,54 @@
 - lastUsedDirtyTime: number
 - rooms: string[]
 
-## Rooms
+## Rooms Objects
 
 ### All
 
 - structureCounts: { [type: string]: number }
 - creepCounts: number
 - droppedEnergy: number
-- creepParts: { [type: string]: {count: number, activeParts: number } }
+- creepParts: { [type: string]: {
+    - count: number,
+    - activeParts: number } }
 - creepStore: { [type: string]: number }
 - tombstoneStore: { [type: string]: number }
 - ruinStore: { [type: string]: number }
 - structureStore: { [type: string]: { [type: string]: number } }
-- constructionSites: { count: number, progress: number, progressTotal: number }
-- sources: {count: number, energy: number, energyCapacity: number }
+- constructionSites: {
+    - count: number,
+    - progress: number,
+    - progressTotal: number }
+- sources: {
+    - count: number,
+    - energy: number,
+    - energyCapacity: number }
 
 ### Owned
 
-- controller: { level: number, progress: number, progressTotal: number, safeModeAvailable: number, safeModeCooldown: number, ticksToDowngrade: number }
-- mineral: { type: string, density: number, amount: number }
+- controller: {
+    - level: number,
+    - progress: number,
+    - progressTotal: number,
+    - safeModeAvailable: number,
+    - safeModeCooldown: number,
+    - ticksToDowngrade: number }
+- mineral: {
+    - type: string,
+    - density: number,
+    - amount: number }
 - spawning (uptime): number
+
+## Rooms intents
+
+- IntentCounts: { [type: string]: number }
+- fatigueDecreased: number
+- averageSpawnCost: number
+- energyOutflow: {
+    - upgradeController: number,
+    - build: number,
+    - repair: number,
+    - withdraw: { [type: string]: number }, }
+- energyInflow: {
+    - harvest: number,
+    - transfer: { [type: string]: number }, }
