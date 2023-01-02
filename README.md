@@ -26,10 +26,20 @@ Debug mode is not advised to turn on because this will add id, steam and passwor
 serverStats: 
   debug: false
   rawExports: true
-  secret_key: "an_secure_secret"
+  secret_key: "an_secure_secret",
+  userStats: 2,
+  roomsObjectsStats: 2,
+  roomsIntentsStats: 2
 ```
 
-* On same depth as mod & steamKey object.
+* debug: false - turns on debug mode (not advised)
+* rawExports: true - turns on raw exports (not advised)
+* secret_key: "an_secure_secret" - sets the secret key for the api calls to authorize
+* usersStats: 2 - 0 = off, 1 = low, 2 = all
+* roomsObjectsStats: 2 - 0 = off, 1 = low, 2 = all
+* roomsIntentsStats: 2 - 0 = off, 1 = low, 2 = all
+
+Include object on same depth as mod & steamKey object.
 
 ## Usage
 
