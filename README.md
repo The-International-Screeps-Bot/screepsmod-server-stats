@@ -26,9 +26,9 @@ Debug mode is not advised to turn on because this will add id, steam and passwor
 serverStats: 
   debug: false
   rawExports: true
-  secret_key: "an_secure_secret",
-  userStats: 2,
-  roomsObjectsStats: 2,
+  secret_key: "an_secure_secret"
+  userStats: 2
+  roomsObjectsStats: 2
   roomsIntentsStats: 2
 ```
 
