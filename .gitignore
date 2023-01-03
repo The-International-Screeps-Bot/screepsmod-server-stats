@@ -6,3 +6,5 @@ roomsObjects.json
 error.log
 intents.txt
 unknownIntents.log
+handlingTimeTaken.log
+handlingTimeTaken.json
