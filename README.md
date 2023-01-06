@@ -30,6 +30,7 @@ serverStats:
   userStats: 2
   roomsObjectsStats: 2
   roomsIntentsStats: 2
+  runEveryTicks: 10
 ```
 
 * debug: false - turns on debug mode (not advised)
