@@ -14,7 +14,7 @@ Overall server stats are in admin utils and will not be handled by this mod.
     "ownedRooms": "number",
     "gametime": "number",
     "users": { 
-        ["username": "string"]: "User (no preview)"
+        "username": "User (no preview)"
     },
 }
 ```
@@ -69,7 +69,7 @@ Overall server stats are in admin utils and will not be handled by this mod.
         "count": "number",
         "energy": "number",
         "energyCapacity": "number" }
-    "structureCounts": { ["type": "StructureConstant"]: "number" },
+    "structureCounts": { "type": "number" },
 }
 ```
 
@@ -77,14 +77,14 @@ Overall server stats are in admin utils and will not be handled by this mod.
 
 ```json
 {
-    "creepParts": { ["type": "BodyPartConstant"]: {
+    "creepParts": { "type": {
         "count": "number",
         "activeParts": "number" } },
-    "creepStore": { ["type": "ResourceConstant"]: "number" },
-    "tombstoneStore": { ["type": "ResourceConstant"]: "number" },
-    "ruinStore": { ["type": "ResourceConstant"]: "number" },
-    "structureStore": { ["type": "StructureConstant"]: { ["type": "ResourceConstant"]: "number" } },
-    "structureHits": { ["type": "StructureConstant"]: "number" },
+    "creepStore": { "type": "number" },
+    "tombstoneStore": { "type": "number" },
+    "ruinStore": { "type": "number" },
+    "structureStore": { "structureType": { "resourceType": "number" } },
+    "structureHits": { "type": "number" },
 }
 ```
 
@@ -119,14 +119,14 @@ Overall server stats are in admin utils and will not be handled by this mod.
         "upgradeController": "number",
         "build": "number",
         "repair": "number",
-        "withdraw": { ["type": "ResourceConstant"]: "number" },
+        "withdraw": { "type": "number" },
     },
     "energyInflow": {
         "harvest": "number",
-        "transfer": { ["type": "ResourceConstant"]: "number" },
+        "transfer": { "type": "number" },
     },
     "fatigueDecreased": "number",
     "spawnCost": "number",
-    "intentCounts": { ["type": "IntentConstant"]: "number" },
+    "intentCounts": { "type": "number" },
 }
 ```
