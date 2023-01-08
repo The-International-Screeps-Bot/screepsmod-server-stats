@@ -19,6 +19,18 @@ Overall server stats are in admin utils and will not be handled by this mod.
 }
 ```
 
+## Overview
+
+```json
+{
+    "gcl": {
+        "level": "number",
+        "progress": "number",
+        "progressTotal": "number" 
+    }
+}
+```
+
 ## Users
 
 - Level 0: Username (key)
@@ -55,11 +67,11 @@ Overall server stats are in admin utils and will not be handled by this mod.
 
 ### All
 
-- Level 2:
+- Level 1:
 
 ```json
 {
-        "constructionSites": {
+    "constructionSites": {
         "count": "number",
         "progress": "number",
         "progressTotal": "number" },
