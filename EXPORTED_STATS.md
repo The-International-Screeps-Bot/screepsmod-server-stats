@@ -27,7 +27,13 @@ Overall server stats are in admin utils and will not be handled by this mod.
         "level": "number",
         "progress": "number",
         "progressTotal": "number" 
-    }
+    },
+    "combinedRCL": "number",
+    "structureCounts": { "type": "number" },
+    "constructionSitesCount": "number",
+    "creepCount": "number",
+    "sourceCapacityTotal": "number",
+    "droppedEnergyTotal": "number",
 }
 ```
 
