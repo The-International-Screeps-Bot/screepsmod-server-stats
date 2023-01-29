@@ -1,16 +1,14 @@
 # screepsmod-server-stats
 
-## This is an tool to get cli commands executed on screeps server and exported via API
+This tool allows you to execute CLI commands on a Screeps server and export the results via an API.
 
-Small note:
-
-If you turn on raw exports and set the secret_key in config.yml you will get access to all the raw data from the server. This could mean harm for your server if not used correctly. I recommend to only use this if you know what you are doing. Contact me on discord if you have any questions. PANDA#3000
+**Note:** If you enable raw exports and set the `secret_key` in `config.yml`, you will have access to all raw data from the server. This can be harmful if not used correctly. It is recommended to only use this feature if you know what you're doing. If you have any questions, contact PANDA#3000 on Discord.
 
 ## Security
 
-This mod is secure by default, without being enabled 2 times in mod config the raw data exports are not enabled. This means that you can only get the default endpoints. If you want to get access to the raw data you need to set the secret_key in config.yml and set rawExports to true. This will enable the raw data exports and you will need to include the secret_key in the header of the request to get access.
+By default, this mod is secure. Raw data exports are not enabled unless the mod is configured twice in the `config.yml` file. This means that you can only access the default endpoints. To access raw data, you must set the `secret_key` in `config.yml` and set `rawExports` to `true`. The `secret_key` must also be included in the header of the request to authorize access.
 
-Debug mode is not advised to turn on because this will add id, steam and password info to the user object export. This is not needed for the mod to work and is only for debugging purposes.
+It is not recommended to enable debug mode as it will add user ID, steam, and password information to the user object export. This is only for debugging purposes and is not necessary for the mod to function.
 
 ## Installation
 
@@ -20,9 +18,9 @@ Debug mode is not advised to turn on because this will add id, steam and passwor
 "screepsmod-server-stats"
 ```
 
-2. To turn on all the api endpoints add the following to your `config.yml`:
+To enable all API endpoints, add the following to your config.yml:
 
-```json
+```yml
 serverStats: 
   debug: false
   rawExports: true
@@ -33,44 +31,31 @@ serverStats:
   runEveryTicks: 10
 ```
 
-* debug: false - turns on debug mode (not advised)
-* rawExports: true - turns on raw exports (not advised)
-* secret_key: "an_secure_secret" - sets the secret key for the api calls to authorize
-* usersStats: 2 - 0 = off, 1 = low, 2 = all
-* roomsObjectsStats: 2 - 0 = off, 1 = low, 2 = all
-* roomsIntentsStats: 2 - 0 = off, 1 = low, 2 = all
+- `debug`: when set to `true`, turns on debug mode (not recommended)
+- `rawExports`: when set to `true`, enables raw data exports (not recommended)
+- `secret_key`: sets the secret key for API calls to authorize access
+- `usersStats`: 0 = off, 1 = low, 2 = all
+- `roomsObjectsStats`: 0 = off, 1 = low, 2 = all
+- `roomsIntentsStats`: 0 = off, 1 = low, 2 = all
 
-Include object on same depth as mod & steamKey object.
+Make sure to include the `serverStats` object at the same depth as the `mod` and `steamKey` objects.
 
 ## Usage
 
-The following api calls can be made (if turned on)
-All api calls expect default endpoints require to be enabled in mod config.yml by setting an secret_key and rawExports value (see installation) otherwise you will get access denied always.
+The following API calls can be made if enabled in the `config.yml` file. All API calls that require access to raw data exports must include the `secret_key` in the header of the request to authorize access.
 
-Don't forget to include the secret_key in the header of the request to get access.
+By default, the following endpoints are enabled:
 
-Default on is:
-
-* /api/stats/server - returns a list of all averaged server stats
-* /api/stats/version - returns the current version of the mod
-
+- `/api/stats/server`: returns a list of all averaged server stats
+- `/api/stats/version`: returns the current version of the mod
 Rooms:
 
-* /api/rooms - returns a list of all rooms
-* /api/rooms/objects - returns a list of all rooms objects
-* /ap/rooms/intents - returns a list of all rooms intents
-* /api/rooms/flags - returns a list of all rooms flags
-* /api/rooms/terrain - returns a list of all rooms terrain
-
+- `/api/rooms`: returns a list of all rooms
+/api/rooms/objects`: returns a list of all rooms objects
+- `/ap/rooms/intents`: returns a list of all rooms intents
+(disabled) /api/rooms/flags`: returns a list of all rooms flags
+- `/api/rooms/terrain`: returns a list of all rooms terrain
 Users:
 
-* /api/users - returns a list of all users
-* **(disabled)** /api/users/console - returns a list of all users console
-* **(disabled)** /api/users/money - returns a list of all users money
-* **(disabled)** /api/users/notifications - returns a list of all users notifications
-* **(disabled)** /api/users/resources - returns a list of all users resources
-* /api/users/power_creeps - returns a list of all users power_creeps
-
-Market:
-
-* **(disabled)** /api/market/transactions - returns a list of all market transactions
+- /api/users: returns a list of all users
+- (disabled) `/api/users/console`: returns a list of
