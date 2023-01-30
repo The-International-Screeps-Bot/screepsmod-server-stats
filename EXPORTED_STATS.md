@@ -81,12 +81,12 @@ Overall server stats are in admin utils and will not be handled by this mod.
         "count": "number",
         "progress": "number",
         "progressTotal": "number" },
-    "creepCounts": "number",
+    "creepCount": "number",
     "droppedEnergy": "number",
-            "sources": {
+    "sources": {
         "count": "number",
         "energy": "number",
-        "energyCapacity": "number" }
+        "energyCapacity": "number" },
     "structureCounts": { "type": "number" },
 }
 ```
