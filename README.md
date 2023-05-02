@@ -50,11 +50,11 @@ By default, the following endpoints are enabled:
 - `/api/stats/version`: returns the current version of the mod
 Rooms:
 
-- `/api/rooms`: returns a list of all rooms
-/api/rooms/objects`: returns a list of all rooms objects
-- `/ap/rooms/intents`: returns a list of all rooms intents
-(disabled) /api/rooms/flags`: returns a list of all rooms flags
-- `/api/rooms/terrain`: returns a list of all rooms terrain
+- `/api/stats/rooms`: returns a list of all rooms
+- `/api/stats/rooms/objects`: returns a list of all rooms objects
+- `/api/stats/rooms/intents`: returns a list of all rooms intents
+- `(disabled) /api/rooms/flags`: returns a list of all rooms flags
+- `/api/stats/rooms/terrain`: returns a list of all rooms terrain
 Users:
 
 - /api/users: returns a list of all users
